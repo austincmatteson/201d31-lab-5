@@ -52,8 +52,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var sumOfThreeNums = sum(sum(a,b)[0],c)[0];
-  var prodOfThreeNums = multiply(multiply(a,b)[0],c)[0];
+  var sumOfThreeNums = sum(sum(a, b)[0], c)[0];
+  var prodOfThreeNums = multiply(multiply(a, b)[0], c)[0];
   var messageSum =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfThreeNums + '.';
   var messageProd = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodOfThreeNums + '.';
   return [sumOfThreeNums, prodOfThreeNums, messageSum, messageProd];
@@ -78,12 +78,8 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  for(var i = 0; i < 2; i++) {
-    var sumCount = 0;
-    var numCurrent = testArray[i];
-    sumCount = sumCount + numCurrent;
-  }
-  var message = testArray[0] + ', ' + testArray[1] + ', ' + testArray[2] + ' was passed in as an array of numbers, and ' + sumCount + ' is their sum.';
+  var sumCount = sumAndMultiply(testArray[0], testArray[1], testArray[2])[0];
+  var message = testArray + ' was passed in as an array of numbers, and ' + sumCount + ' is their sum.';
   return [sumCount, message];
 }
 
